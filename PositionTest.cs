@@ -29,5 +29,11 @@ namespace XUnit_testing_assignment
 
             Assert.Equal(result, actual);
         }
+
+        [Fact]
+        public void ShouldThrowExceptionOnNegativeValue()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => new Position(-1, -1));
+        }
     }
 }
