@@ -20,7 +20,12 @@ namespace XUnit_testing_assignment
             }
             private set
             {
-                throw new NotImplementedException("XCoordinate not implemented");
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value));
+                }
+
+                _x = value;
             }
         }
         public int YCoordinate
@@ -31,7 +36,12 @@ namespace XUnit_testing_assignment
             }
             private set
             {
-                throw new NotImplementedException("XCoordinate not implemented");
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(value));
+                }
+
+                _y = value;
             }
         }
     }
