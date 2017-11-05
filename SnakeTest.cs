@@ -28,7 +28,8 @@ namespace XUnit_testing_assignment
             Position result = _snake.HeadPosition;
             Position actual = new Position(SnakeStub.INITIAL_XCOORDINATE, SnakeStub.INITIAL_YCOORDINATE);
 
-            Assert.Equal(result, actual);
+            Assert.Equal(result.XCoordinate, actual.XCoordinate);
+            Assert.Equal(result.YCoordinate, actual.YCoordinate);
         }
         [Fact]
         public void ExpectLastBodyPieceToBeBehindHead()
@@ -37,11 +38,12 @@ namespace XUnit_testing_assignment
 
             Position result = SnakePos.Last();
 
-            int x = SnakeStub.INITIAL_LENGTH - 5;
-            int y = SnakeStub.INITIAL_LENGTH - 5;
+            int x = SnakeStub.INITIAL_XCOORDINATE - 5;
+            int y = SnakeStub.INITIAL_YCOORDINATE - 5;
             Position actual = new Position(x,y);
 
-            Assert.Equal(result, actual);
+            Assert.Equal(result.XCoordinate, actual.XCoordinate);
+            Assert.Equal(result.XCoordinate, actual.YCoordinate);
         }
 
         [Fact]
