@@ -31,7 +31,7 @@ namespace XUnit_testing_assignment
         }
 
         [Fact]
-        public void ShouldThrowExceptionOnNegativeValue()
+        public void ShouldThrowExceptionOnNegativePositionValue()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => new Position(-1, -1));
         }
