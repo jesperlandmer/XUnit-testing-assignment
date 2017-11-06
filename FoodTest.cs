@@ -18,8 +18,8 @@ namespace XUnit_testing_assignment
             Position result = _food.FoodPosition;
             Position actual = new Position();
 
-            Assert.True(result.XCoordinate == actual.XCoordinate);
-            Assert.True(result.YCoordinate == actual.YCoordinate);
+            Assert.False(result.XCoordinate == actual.XCoordinate);
+            Assert.False(result.YCoordinate == actual.YCoordinate);
         }
     }
 }
