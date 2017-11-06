@@ -11,9 +11,9 @@ namespace XUnit_testing_assignment
             FoodPosition = GetRandomPosition();
         }
 
-        public Position GetRandomPosition()
+        private Position GetRandomPosition()
         {
-            // TODO: Create constant that reflects the Game Board limits stead of magic numbers
+            // TODO: Create constant that reflects the Game Board limits instead of magic numbers
             int x = _random.Next(1, 20);
             int y = _random.Next(1, 20);
 
