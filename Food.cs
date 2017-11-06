@@ -13,6 +13,7 @@ namespace XUnit_testing_assignment
 
         public Position GetRandomPosition()
         {
+            // TODO: Create constant that reflects the Game Board limits stead of magic numbers
             int x = _random.Next(1, 20);
             int y = _random.Next(1, 20);
 
