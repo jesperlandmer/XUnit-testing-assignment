@@ -4,15 +4,19 @@ namespace XUnit_testing_assignment
 {
     class Food
     {
+        private Random _random = new Random();
         public Position FoodPosition { get; private set; }
         public Food()
         {
-            SetRandomPosition();
+            FoodPosition = GetRandomPosition();
         }
 
-        public void SetRandomPosition()
+        public Position GetRandomPosition()
         {
-            throw new NotImplementedException("No method for setting postion of food");
+            int x = _random.Next(1, 20);
+            int y = _random.Next(1, 20);
+
+            return new Position(x,y);
         }
     }
 }
